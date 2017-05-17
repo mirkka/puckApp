@@ -1,0 +1,45 @@
+Setup:
+Computer
+Setting up react-native project (in CL):
+-Install Node, Watchman using Homebrew:
+	brew install node
+	brew install watchman -install react-native command line interface: 	npm install -g react-native-cli
+-react-native init MyProject
+-cd MyProject
+-Set up the ANDROID_HOME environment variable:
+	-create new file in editor
+	-add:
+		export ANDROID_HOME=${HOME}/Library/Android/sdk
+		export PATH=${PATH}:${ANDROID_HOME}/tools
+		export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+	-save into home directory as .profile
+-type source ~/.profile to load the config into your current shell
+
+install android studio (for SDKs/emulator):
+	https://facebook.github.io/react-native/docs/getting-started.html#1-download-and-install-android-studio
+	https://facebook.github.io/react-native/docs/getting-started.html#2-install-the-avd-and-haxm
+	https://facebook.github.io/react-native/docs/getting-started.html#3-install-the-android-6-0-marshmallow-sdk
+
+How to access developer settings on the Galaxy S7
+1. Open settings.
+2. Tap on About Device. It's all the way down at the bottom of the menu.
+3. Tap on Software info.
+4. Tap on Build number 7 times.
+
+On physical device
+In dev tools (settings -> Developer options):
+-Stay awake
+-USB debugging
+
+Set up emulator for s7
+-open AVD Manager from Android studio
+-click "+Create Virtual Device"
+-fill form according to this (Galaxy S7 Specification for Creating a Virtual Device): http://developer.samsung.com/technical-doc/view.do?v=T000000287
+
+Run App
+-connect device via USB
+-in CL type react-native run-android
+
+Developer Menu (shake device when app open):
+-in CL type adb reverse tcp:8081 tcp:8081 (not sure if needed) -To debug the JavaScript code in Chrome, select "Debug JS Remotely" from the Developer Menu. This will open a new tab at http://localhost:8081/debugger-ui
+-open dev tools console to see console logs from index.android.js
