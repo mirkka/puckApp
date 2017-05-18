@@ -26,6 +26,7 @@ MERGED from [com.facebook.react:react-native:0.44.0] /Users/mlis/AwesomeProject/
 		ADDED from /Users/mlis/AwesomeProject/android/app/src/main/AndroidManifest.xml:7:22-75
 uses-sdk
 ADDED from /Users/mlis/AwesomeProject/android/app/src/main/AndroidManifest.xml:9:5-11:41
+MERGED from [AwesomeProject:react-native-ble-manager:unspecified] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/AwesomeProject/react-native-ble-manager/unspecified/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.react:react-native:0.44.0] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.0.1] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:20:5-43
@@ -86,6 +87,24 @@ activity#com.facebook.react.devsupport.DevSettingsActivity
 ADDED from /Users/mlis/AwesomeProject/android/app/src/main/AndroidManifest.xml:29:7-84
 	android:name
 		ADDED from /Users/mlis/AwesomeProject/android/app/src/main/AndroidManifest.xml:29:17-81
+uses-permission#android.permission.BLUETOOTH
+ADDED from [AwesomeProject:react-native-ble-manager:unspecified] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/AwesomeProject/react-native-ble-manager/unspecified/AndroidManifest.xml:7:5-68
+	android:name
+		ADDED from [AwesomeProject:react-native-ble-manager:unspecified] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/AwesomeProject/react-native-ble-manager/unspecified/AndroidManifest.xml:7:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from [AwesomeProject:react-native-ble-manager:unspecified] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/AwesomeProject/react-native-ble-manager/unspecified/AndroidManifest.xml:8:5-74
+	android:name
+		ADDED from [AwesomeProject:react-native-ble-manager:unspecified] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/AwesomeProject/react-native-ble-manager/unspecified/AndroidManifest.xml:8:22-71
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [AwesomeProject:react-native-ble-manager:unspecified] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/AwesomeProject/react-native-ble-manager/unspecified/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from [AwesomeProject:react-native-ble-manager:unspecified] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/AwesomeProject/react-native-ble-manager/unspecified/AndroidManifest.xml:9:22-78
+uses-feature#android.hardware.bluetooth_le
+ADDED from [AwesomeProject:react-native-ble-manager:unspecified] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/AwesomeProject/react-native-ble-manager/unspecified/AndroidManifest.xml:11:5-13:35
+	android:required
+		ADDED from [AwesomeProject:react-native-ble-manager:unspecified] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/AwesomeProject/react-native-ble-manager/unspecified/AndroidManifest.xml:13:9-32
+	android:name
+		ADDED from [AwesomeProject:react-native-ble-manager:unspecified] /Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/AwesomeProject/react-native-ble-manager/unspecified/AndroidManifest.xml:12:9-53
 android:uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 IMPLIED from /Users/mlis/AwesomeProject/android/app/src/main/AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 android:uses-permission#android.permission.READ_PHONE_STATE

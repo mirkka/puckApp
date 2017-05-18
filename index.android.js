@@ -12,10 +12,15 @@ import {
   Switch,
   StatusBar,
   Text,
-  View
+  View,
+  TouchableHighlight,
+  NativeAppEventEmitter,
+  Platform,
+  PermissionsAndroid
 } from 'react-native';
 import { createStore } from 'redux'
 import { Provider, connect } from 'react-redux'
+import BleManager from 'react-native-ble-manager'
 
 import puckApp from './reducers'
 import { global } from './mainStyles'

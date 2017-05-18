@@ -57,6 +57,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/AwesomeProject/react-native-ble-manager/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3930e8d31a0a748b2ac83bb45741a0627a9e8c80">
+        <dex dex="/Users/mlis/AwesomeProject/android/app/build/intermediates/pre-dexed/debug/AwesomeProject-react-native-ble-manager-unspecified_fed939ec1bf0e4cc8e2826e3158e4e9c795607f5.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/mlis/AwesomeProject/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
