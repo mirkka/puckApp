@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 15,
   },
     headerText: {
     color: '#ffffff',

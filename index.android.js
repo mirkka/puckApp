@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 import { createStore } from 'redux'
 import { Provider, connect } from 'react-redux'
+import { BleManager }  from 'react-native-ble-plx'
 
 import puckApp from './reducers'
 import { global } from './mainStyles'
@@ -24,7 +25,7 @@ import { Header } from './components/header'
 import { Batery } from './components/batteryStatus'
 import { Temperature } from './components/temperature'
 import { Switches } from './components/switches'
-import { BleManager }  from 'react-native-ble-plx'
+import { DeviceInfo } from './components/deviceInfo'
 
 const store = createStore(puckApp)
 
@@ -139,17 +140,15 @@ class AppComponent extends Component {
   render() {
     return (
       <View>
-      <Header/>
-      <View>
-        <Text>{this.props.device ? this.props.device.name : 'no device connected'}</Text>
-      </View>
-      <View style={global.content}>
-        <View>
-          <Batery/>
-          <Temperature/>
-          <Switches/>
+        <Header/>
+        <DeviceInfo/>
+        <View style={global.content}>
+          <View>
+            <Batery/>
+            <Temperature/>
+            <Switches/>
+          </View>
         </View>
-      </View>
     </View>
     )
   }
