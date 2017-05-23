@@ -4,7 +4,10 @@ import { toggleProximity } from './actions'
 
 const initialState = {
   callAndSms: true,
-  proximity: true
+  proximity: true,
+  device: undefined,
+  temperature: undefined,
+  battery: undefined
 }
 
 function callAndSmsSwitch(state = initialState, action) {
@@ -31,9 +34,45 @@ function proximitySwitch(state = initialState, action) {
   }
 }
 
+function handleDevice(state = initialState, action) {
+  switch (action.type) {
+    case 'bleFound':
+      return Object.assign({}, state, {
+        device: action.value
+      })
+    default:
+      return state
+  }
+}
+
+function setTemperature(state = initialState, action) {
+  switch (action.type) {
+    case 'temperature':
+      return Object.assign({}, state, {
+        temperature: action.value
+      })
+    default:
+      return state
+  }
+}
+
+function setBatteryStatus(state = initialState, action) {
+  switch (action.type) {
+    case 'battery':
+      return Object.assign({}, state, {
+        battery: action.value
+      })
+    default:
+      return state
+  }
+}
+
 const puckApp = combineReducers({
   callAndSmsSwitch,
-  proximitySwitch
+  proximitySwitch,
+  handleDevice,
+  setTemperature,
+  setBatteryStatus
 })
 
 export default puckApp
