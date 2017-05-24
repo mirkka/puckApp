@@ -19,3 +19,7 @@ export const temperature = {
 export const battery = {
   type: 'battery'
 }
+
+export const bleManager = {
+	type: 'bleManager'
+}

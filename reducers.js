@@ -7,7 +7,8 @@ const initialState = {
   proximity: true,
   device: undefined,
   temperature: undefined,
-  battery: undefined
+  battery: undefined,
+  bleManager: undefined
 }
 
 function callAndSmsSwitch(state = initialState, action) {
@@ -67,12 +68,24 @@ function setBatteryStatus(state = initialState, action) {
   }
 }
 
+function setManager(state = initialState, action) {
+  switch (action.type) {
+    case 'bleManager':
+      return Object.assign({}, state, {
+        bleManager: action.value
+      })
+    default:
+      return state
+  }
+}
+
 const puckApp = combineReducers({
   callAndSmsSwitch,
   proximitySwitch,
   handleDevice,
   setTemperature,
-  setBatteryStatus
+  setBatteryStatus,
+  setManager
 })
 
 export default puckApp

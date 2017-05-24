@@ -24,7 +24,7 @@ import { global } from './mainStyles'
 import { Header } from './components/header'
 import { Batery } from './components/batteryStatus'
 import { Temperature } from './components/temperature'
-import { Switches } from './components/switches'
+import Switches from './components/switches'
 import { DeviceInfo } from './components/deviceInfo'
 
 const store = createStore(puckApp)
@@ -39,11 +39,12 @@ const mapDispatchToProps = dispatch => ({
   actions: {
     setDiscoveredDevice: (data) => dispatch({ type: 'bleFound', value: data }),
     setTemperature: (temperature) => dispatch({type: 'temperature', value: temperature}),
-    setBatteryStatus: (status) => dispatch({type: 'battery', value: status})
+    setBatteryStatus: (status) => dispatch({type: 'battery', value: status}),
+    setManager: (manager) => dispatch({type: 'bleManager', value: manager})
   }
 })
 
-const interpreter = {
+export const interpreter = {
   uuid: '6e400001-b5a3-f393-e0a9-e50e24dcca9e',
   write: '6e400002-b5a3-f393-e0a9-e50e24dcca9e',
   read: '6e400003-b5a3-f393-e0a9-e50e24dcca9e'
@@ -58,6 +59,7 @@ class AppComponent extends Component {
 
   componentDidMount() {
     this.scanAndConnect()
+    this.props.actions.setManager(this.manager)
   }
 
   componentWillUnmount() {
@@ -71,6 +73,7 @@ class AppComponent extends Component {
     this.manager.characteristicsForDevice(device.id, interpreter.uuid)
       .then(characteristics => {
         
+        //TODO: replace with find by ID
         characteristics[0].monitor((err, resp) => {
           var value = atob(resp.value)
           var match = value.match(/^\=(?:(.*))$/m)
